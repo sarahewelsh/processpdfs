@@ -77,5 +77,5 @@ for filename in filenames:
       date = date1.partition("(UTC)")[0]
       # print(f"date {date}")
       file_date = parse_date(date)
-      current_doc.save(f"{dest_path}{file_date} {filename}")
+      current_doc.save(f"{dest_path}/{file_date} {filename}")
       print("done")
