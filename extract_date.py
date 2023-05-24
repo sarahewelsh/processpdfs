@@ -1,7 +1,6 @@
 import os
 import fitz
 import fnmatch
-import datetime
 
 def add_padding(str):
   if len(str) != 2:
@@ -24,7 +23,7 @@ def convert_24_hr(hr, value):
   else:
     return hr
 
-# calls partition helper function to break apart strings into datetime components, calls convert_to_int helper function to convert those values all to ints, creates datetime object. 
+# calls partition helper function to break apart strings into components, calls convert_to_int helper function to convert those values all to ints, creates name in desired format to be added to file name. 
 def format_date(cal_str, time_str):
   month = partition(cal_str, "/", 0)
   formatted_month = str(add_padding(month))
